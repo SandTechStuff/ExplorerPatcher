@@ -374,6 +374,7 @@ BEGIN
     IDS_OTHER_NOREDIRECT_PROGRAMS "Programs and Features"
     IDS_OTHER_NOREDIRECT_DATETIME "Adjust date/time"
     IDS_OTHER_NOREDIRECT_TRAYICONS "Customize notification icons"
+    IDS_OTHER_DISABLEGUIMICA "Disable Mica on ExplorerPatcher GUI"
 
     IDS_UPDATES                 "Updates"
 
@@ -433,3 +434,4 @@ BEGIN
 
     IDS_FOOTER_RESTART          "Restart File Explorer"
 END
+
