@@ -52,6 +52,11 @@ inline BOOL IsDwmExtendFrameIntoClientAreaBrokenInThisBuild()
     return FALSE;
 }
 
+inline BOOL IsMicaDisabledInGui()
+{
+    return TRUE;
+}
+
 inline HRESULT SetMicaMaterialForThisWindow(HWND hWnd, BOOL bApply)
 {
     if (!IsWindows11() || IsDwmExtendFrameIntoClientAreaBrokenInThisBuild()) return S_FALSE;
