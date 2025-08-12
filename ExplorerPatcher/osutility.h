@@ -64,7 +64,7 @@ inline BOOL IsMicaDisabledInGui()
     DWORD value;
     DWORD size = sizeof(value);
 
-    result = RegQueryValueEx(key, TEXT("IsMicaDisabledInGUI"), NULL, NULL, (BYTE*)&value, &size);
+    result = RegQueryValueEx(key, TEXT("UseMicaInProperties"), NULL, NULL, (BYTE*)&value, &size);
     RegCloseKey(key);
 
     if (result != ERROR_SUCCESS) {
