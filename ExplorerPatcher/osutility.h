@@ -54,7 +54,37 @@ inline BOOL IsDwmExtendFrameIntoClientAreaBrokenInThisBuild()
 
 inline BOOL IsMicaDisabledInGui()
 {
-    return TRUE;
+    HKEY key;
+    LONG result = RegOpenKeyEx(HKEY_CURRENT_USER, TEXT("SOFTWARE\\ExplorerPatcher"), 0, KEY_READ, &key);
+
+    if (result != ERROR_SUCCESS) {
+        return FALSE;
+    }
+
+    DWORD value;
+    DWORD size = sizeof(value);
+
+    result = RegQueryValueEx(key, TEXT("IsMicaDisabledInGUI"), NULL, NULL, (BYTE*)&value, &size);
+    RegCloseKey(key);
+
+    if (result != ERROR_SUCCESS) {
+        return FALSE;
+    }
+
+    if (value = 0) {
+        if (!IsWindows11())
+        {
+            return FALSE;
+        }
+        if ((global_rovi.dwBuildNumber >= 21996 && global_rovi.dwBuildNumber < 22000) || (global_rovi.dwBuildNumber == 22000 && (global_ubr >= 1 && global_ubr <= 51)))
+        {
+            return TRUE;
+        }
+        return FALSE;
+    }
+    else {
+        return TRUE;
+    }
 }
 
 inline HRESULT SetMicaMaterialForThisWindow(HWND hWnd, BOOL bApply)

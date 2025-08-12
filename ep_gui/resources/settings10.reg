@@ -583,6 +583,8 @@
 "PinnedItemsActAsQuickLaunch"=dword:00000000
 ;b %R:1913% *
 "RemoveExtraGapAroundPinnedItems"=dword:00000000
+;b %R:2302%
+"IsMicaEnabledInGUI"=dword:00000000
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\ExplorerPatcher]
 ;b %R:1927% *
 "XamlSounds"=dword:00000000
