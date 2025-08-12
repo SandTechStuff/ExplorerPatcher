@@ -644,7 +644,7 @@
 ;b %R:1702%
 "LastSectionInProperties"=dword:00000000
 ;b %R:2302%
-"UseMicaInProperties"=dword:00000000
+"UseMicaInProperties"=dword:00000001
 ;b %R:1703% *
 "ClockFlyoutOnWinC"=dword:00000000
 ;b %R:1704% *
